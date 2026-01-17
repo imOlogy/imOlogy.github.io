@@ -57,7 +57,7 @@ The application comes pre-seeded with an Administrator account for testing and g
 
 ## Database Model
 
-![Database ER Diagram](./GymApp/assets/db-diagram.png)
+![Database ER Diagram](./assets/db-diagram.png)
 
 The system utilizes a relational database model with the following core entities:
 * **Gyms:** Stores location data and operating hours.
@@ -73,17 +73,17 @@ The system utilizes a relational database model with the following core entities
 ### 1. Home & AI Coach
 | Home Page | AI Analysis Result |
 | :---: | :---: |
-| ![Home Page](./GymApp/assets/home-page.png) | ![AI Result](./GymApp/assets/ai-result.png) |
+| ![Home Page](.assets/home-page.png) | ![AI Result](./assets/ai-result.png) |
 
 ### 2. Admin Panel & Reporting
 | Dashboard Analytics | Filtered Reports |
 | :---: | :---: |
-| ![Dashboard](./GymApp/assets/admin-dashboard.png) | ![Reports](./GymApp/assets/admin-reports.png) |
+| ![Dashboard](./assets/admin-dashboard.png) | ![Reports](./assets/admin-reports.png) |
 
 ### 3. Booking System
 | Date/Time Selection | Booking Confirmation |
 | :---: | :---: |
-| ![Date Picker](./GymApp/assets/booking-picker.png) | ![Confirmation](./GymApp/assets/booking-confirm.png) |
+| ![Date Picker](./assets/booking-picker.png) | ![Confirmation](./assets/booking-confirm.png) |
 
 ---
 
