@@ -84,7 +84,7 @@ The easiest way to run the project locally is using Docker.
 Clone the repository and navigate to the root directory:
 
 ```bash
-git clone https://github.com/yourusername/trade-scout.git
+git clone https://github.com/imOlogy/trade-scout.git
 cd trade-scout
 
 ```
