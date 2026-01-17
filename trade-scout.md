@@ -20,7 +20,7 @@ The primary goal of this project is to automate the market research process for 
 
 One of TradeScout's core strengths is its **modular design**, built to adapt to changing technology needs without rewriting the entire codebase.
 
-* ** Pluggable LLM Interface:** The system is not locked into a single AI provider. It uses an abstract base class (`BaseLLMModel`) for query generation.
+* **Pluggable LLM Interface:** The system is not locked into a single AI provider. It uses an abstract base class (`BaseLLMModel`) for query generation.
 * *Current Implementation:* Google Gemini Pro.
 * *Easy Swap:* You can switch to **OpenAI (GPT-4)**, **Anthropic (Claude)**, or even local open-source models (Llama 3, Mistral) simply by adding a new class that inherits from `BaseLLMModel` and updating one line of configuration.
 
