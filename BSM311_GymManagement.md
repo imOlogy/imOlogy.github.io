@@ -73,7 +73,7 @@ The system utilizes a relational database model with the following core entities
 ### 1. Home & AI Coach
 | Home Page | AI Analysis Result |
 | :---: | :---: |
-| ![Home Page](.assets/home-page.png) | ![AI Result](./assets/ai-result.png) |
+| ![Home Page](./assets/home-page.png) | ![AI Result](./assets/ai-result.png) |
 
 ### 2. Admin Panel & Reporting
 | Dashboard Analytics | Filtered Reports |
