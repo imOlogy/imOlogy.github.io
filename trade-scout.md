@@ -10,9 +10,9 @@ The primary goal of this project is to automate the market research process for 
 
 **Future Roadmap:**
 
-* ** Excel/CSV Export:** Ability to download hundreds of rows of company data in Excel format with a single click.
-* ** Real-Time Tax & Customs Regulations:** Instant display of customs duty rates and trade restrictions between two selected countries (e.g., Turkey -> Germany).
-* ** Big Data Processing:** Listing hundreds or even thousands of potential leads per search and integration with CRM systems.
+* **Excel/CSV Export:** Ability to download hundreds of rows of company data in Excel format with a single click.
+* **Real-Time Tax & Customs Regulations:** Instant display of customs duty rates and trade restrictions between two selected countries (e.g., Turkey -> Germany).
+* **Big Data Processing:** Listing hundreds or even thousands of potential leads per search and integration with CRM systems.
 
 ---
 
