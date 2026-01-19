@@ -88,3 +88,31 @@ ul, ol {
 li {
   margin-bottom: 4px;
 }
+
+/* --- 4. FIX SYNTAX HIGHLIGHTING (Make code readable) --- */
+/* This fixes the invisible dark blue text in code blocks */
+
+/* Attributes, Flags (--build), and Function Names -> Light Purple */
+.highlight .na, .highlight .nb, .highlight .nc, .highlight .nt, .highlight .nv, .highlight .nf {
+  color: #d2a8ff !important; 
+}
+
+/* Keywords (if, else, return) -> Soft Red */
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .kv {
+  color: #ff7b72 !important; 
+}
+
+/* Strings ("text") -> Light Blue */
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+  color: #a5d6ff !important; 
+}
+
+/* Comments (# comment) -> Soft Gray */
+.highlight .c, .highlight .ch, .highlight .cm, .highlight .cp, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #8b949e !important; 
+}
+
+/* Operators (=, +, -) -> Soft Red */
+.highlight .o, .highlight .ow {
+  color: #ff7b72 !important; 
+}
