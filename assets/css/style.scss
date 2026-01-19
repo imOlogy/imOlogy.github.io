@@ -1,0 +1,69 @@
+---
+---
+
+/* Import the base theme */
+@import "{{ site.theme }}";
+
+/* --- PROFESSIONAL DARK MODE OVERRIDES --- */
+
+/* 1. Base Colors & Typography */
+body {
+  background-color: #0d1117; /* GitHub Dark Dimmed background */
+  color: #c9d1d9;            /* Soft text color */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* 2. Headers and Links */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+  border-bottom: 1px solid #30363d; /* Subtle separator */
+  padding-bottom: 0.3em;
+}
+
+a {
+  color: #58a6ff; /* Professional Blue */
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* 3. Code Blocks */
+code {
+  background-color: #262c36;
+  padding: 0.2em 0.4em;
+  border-radius: 6px;
+  font-size: 85%;
+}
+
+/* --- THE "CARD" LAYOUT FOR PROJECTS --- */
+/* This transforms your bullet points into clickable cards */
+
+/* Target the list immediately following the "Projects" header */
+ul {
+  list-style: none; /* Remove bullet points */
+  padding-left: 0;
+}
+
+li {
+  background: #161b22; /* Slightly lighter card background */
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover {
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  border-color: #8b949e;
+}
+
+/* Make the project titles inside the list bold/larger */
+li strong {
+  color: #ffffff;
+  font-size: 1.1em;
+  display: block;
+  margin-bottom: 4px;
+}
