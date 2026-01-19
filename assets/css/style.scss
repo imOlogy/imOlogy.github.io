@@ -57,27 +57,47 @@ strong, b {
 
 /* Style the List Items as Cards */
 .project-cards li {
+  position: relative; /* <--- CRITICAL: Anchors the invisible link */
   background: #161b22;
   border: 1px solid #30363d;
   border-radius: 6px;
   padding: 16px;
   margin-bottom: 16px;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-/* Hover effect */
+/* Hover effect for the card */
 .project-cards li:hover {
   border-color: #8b949e;
   transform: translateY(-2px);
+  cursor: pointer; /* Shows the "hand" cursor over the whole card */
 }
 
-/* Make the bold titles inside cards Blue and block-level */
+/* Make the title Blue and block-level */
 .project-cards li strong {
   color: #58a6ff !important;
   font-size: 1.1em;
   display: block;
   margin-bottom: 8px;
 }
+
+/* --- THE MAGIC: STRETCHED LINK --- */
+/* This takes the link inside the title and stretches it to cover the whole card */
+.project-cards li strong a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Make the title underline when you hover *anywhere* on the card */
+.project-cards li:hover strong a {
+  text-decoration: underline;
+}
+
 
 /* --- 3. STANDARD LISTS (For all other pages) --- */
 /* This ensures your "How to Play" lists look normal */
