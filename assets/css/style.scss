@@ -4,66 +4,80 @@
 /* Import the base theme */
 @import "{{ site.theme }}";
 
-/* --- PROFESSIONAL DARK MODE OVERRIDES --- */
-
-/* 1. Base Colors & Typography */
+/* --- 1. FORCE DARK BACKGROUND & TEXT --- */
 body {
-  background-color: #0d1117; /* GitHub Dark Dimmed background */
-  color: #c9d1d9;            /* Soft text color */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background-color: #0d1117 !important; /* GitHub Dark Dimmed */
+  color: #c9d1d9 !important;            /* Light Gray Text */
 }
 
-/* 2. Headers and Links */
+/* --- 2. FIX INVISIBLE TITLES (BOLD TEXT) --- */
+/* The theme was forcing bold text to be black. We force it to white. */
+strong, b {
+  color: #ffffff !important;
+}
+
+/* --- 3. FIX CODE BLOCKS --- */
+/* The theme was keeping the white box. We force it dark. */
+pre, code {
+  background-color: #161b22 !important; /* Dark background for code */
+  color: #e6edf3 !important;            /* Bright text for code */
+  border: 1px solid #30363d;
+  border-radius: 6px;
+}
+
+/* Fix scrolling for large code blocks */
+pre {
+  padding: 16px;
+  overflow: auto;
+}
+
+/* Tweak inline code (like `text`) to look distinct from blocks */
+p code, li code {
+  padding: 0.2em 0.4em;
+  background-color: rgba(110, 118, 129, 0.4) !important;
+  border: none;
+}
+
+/* --- 4. HEADERS & LINKS --- */
 h1, h2, h3, h4, h5, h6 {
-  color: #ffffff;
-  border-bottom: 1px solid #30363d; /* Subtle separator */
-  padding-bottom: 0.3em;
+  color: #ffffff !important;
+  border-bottom: 1px solid #30363d;
 }
 
 a {
-  color: #58a6ff; /* Professional Blue */
+  color: #58a6ff !important; /* Bright Blue */
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
 }
 
-/* 3. Code Blocks */
-code {
-  background-color: #262c36;
-  padding: 0.2em 0.4em;
-  border-radius: 6px;
-  font-size: 85%;
-}
+/* --- 5. THE PROJECT CARD LAYOUT --- */
+/* Applies to the project list in index.md */
 
-/* --- THE "CARD" LAYOUT FOR PROJECTS --- */
-/* This transforms your bullet points into clickable cards */
-
-/* Target the list immediately following the "Projects" header */
+/* Only target the specific list inside the content */
 ul {
-  list-style: none; /* Remove bullet points */
+  list-style: none;
   padding-left: 0;
 }
 
 li {
-  background: #161b22; /* Slightly lighter card background */
+  background: #161b22;
   border: 1px solid #30363d;
   border-radius: 6px;
   padding: 16px;
   margin-bottom: 16px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 li:hover {
-  transform: translateY(-2px); /* Slight lift effect */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  border-color: #8b949e;
+  border-color: #8b949e; /* Light grey border on hover */
+  transform: translateY(-2px);
 }
 
-/* Make the project titles inside the list bold/larger */
+/* Ensure the titles inside the cards are white and pop out */
 li strong {
-  color: #ffffff;
+  color: #58a6ff !important; /* Blue title for projects */
   font-size: 1.1em;
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
