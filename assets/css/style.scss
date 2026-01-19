@@ -4,80 +4,87 @@
 /* Import the base theme */
 @import "{{ site.theme }}";
 
-/* --- 1. FORCE DARK BACKGROUND & TEXT --- */
+/* --- 1. GLOBAL DARK MODE (Applies to all pages) --- */
 body {
-  background-color: #0d1117 !important; /* GitHub Dark Dimmed */
-  color: #c9d1d9 !important;            /* Light Gray Text */
+  background-color: #0d1117 !important;
+  color: #c9d1d9 !important;
 }
 
-/* --- 2. FIX INVISIBLE TITLES (BOLD TEXT) --- */
-/* The theme was forcing bold text to be black. We force it to white. */
-strong, b {
-  color: #ffffff !important;
-}
-
-/* --- 3. FIX CODE BLOCKS --- */
-/* The theme was keeping the white box. We force it dark. */
-pre, code {
-  background-color: #161b22 !important; /* Dark background for code */
-  color: #e6edf3 !important;            /* Bright text for code */
-  border: 1px solid #30363d;
-  border-radius: 6px;
-}
-
-/* Fix scrolling for large code blocks */
-pre {
-  padding: 16px;
-  overflow: auto;
-}
-
-/* Tweak inline code (like `text`) to look distinct from blocks */
-p code, li code {
-  padding: 0.2em 0.4em;
-  background-color: rgba(110, 118, 129, 0.4) !important;
-  border: none;
-}
-
-/* --- 4. HEADERS & LINKS --- */
+/* Headers */
 h1, h2, h3, h4, h5, h6 {
   color: #ffffff !important;
   border-bottom: 1px solid #30363d;
 }
 
+/* Links */
 a {
-  color: #58a6ff !important; /* Bright Blue */
+  color: #58a6ff !important;
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
 }
 
-/* --- 5. THE PROJECT CARD LAYOUT --- */
-/* Applies to the project list in index.md */
+/* Code Blocks (Applies to all pages) */
+pre, code {
+  background-color: #161b22 !important;
+  color: #e6edf3 !important;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+}
+pre { padding: 16px; overflow: auto; }
 
-/* Only target the specific list inside the content */
-ul {
+/* Inline code adjustment */
+p code, li code {
+  padding: 0.2em 0.4em;
+  background-color: rgba(110, 118, 129, 0.4) !important;
+  border: none;
+}
+
+/* Fix invisible bold text globally */
+strong, b {
+  color: #ffffff !important;
+}
+
+
+/* --- 2. THE CARD LAYOUT (Only applies to .project-cards) --- */
+
+/* Remove default bullets for the card container */
+.project-cards ul {
   list-style: none;
   padding-left: 0;
 }
 
-li {
+/* Style the List Items as Cards */
+.project-cards li {
   background: #161b22;
   border: 1px solid #30363d;
   border-radius: 6px;
   padding: 16px;
   margin-bottom: 16px;
+  transition: transform 0.2s ease;
 }
 
-li:hover {
-  border-color: #8b949e; /* Light grey border on hover */
+/* Hover effect */
+.project-cards li:hover {
+  border-color: #8b949e;
   transform: translateY(-2px);
 }
 
-/* Ensure the titles inside the cards are white and pop out */
-li strong {
-  color: #58a6ff !important; /* Blue title for projects */
+/* Make the bold titles inside cards Blue and block-level */
+.project-cards li strong {
+  color: #58a6ff !important;
   font-size: 1.1em;
   display: block;
   margin-bottom: 8px;
+}
+
+/* --- 3. STANDARD LISTS (For all other pages) --- */
+/* This ensures your "How to Play" lists look normal */
+ul, ol {
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 4px;
 }
