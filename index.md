@@ -4,7 +4,7 @@ Welcome to the public index of my private coursework and personal projects. This
 
 ## Projects
 
-<div class="project-cards">
+<div class="project-cards" markdown="1">
 
 - **[BSM103 — Wedding Organization System](./BSM103_WeddingManagement.md)**
   A C++ console application using pipe-delimited text files to model relational data (weddings, guests, costs). Features include file-stream CRUD operations, cascade deletion, and automated seating-plan generation.
