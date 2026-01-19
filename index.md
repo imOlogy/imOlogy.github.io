@@ -44,5 +44,4 @@ Welcome to the public index of my private coursework and personal projects. This
 
 ## Request Access
 To view a full project repository:
-1. Open an **Issue** in this repo with the **Project Name** and your **Purpose** (review, grading, hiring).
-2. Or DM me directly on GitHub: **[@imOlogy](https://github.com/imOlogy)**
+Open an **Issue** in this repo with the **Project Name** and your **Purpose** (review, grading, hiring).
